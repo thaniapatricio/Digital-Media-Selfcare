@@ -1,37 +1,54 @@
+<!DOCTYPE html>
 <html>
+    
     <head>
-        <title> Selfcare Icons </title>
-        <style>
-    .row{
-        width:720px;
+    <title>Selfcare Icon Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"> </script>
+    <style>
+            .row{
+                width:720px;
                 margin: 10px auto 10px auto ;
-    }
-    .image-container {
+            }
+            .image-container {
                 display: table-cell;
                 vertical-align: middle;
                 padding:20px;
             }
- </style>
- </head>
+    </style>
+    </head>
 
- <body>
-     <div class="row">
+    <body>
+        <script>
+            var sound1 = new buzz.sound("sound/bubble.wav")
+            var sound2 = new buzz.sound("sound/kiss.wav")
+            var sound3 = new buzz.sound("sound/water.wav")
+            var sound4 = new buzz.sound("sound/lemon.wav.mp3")
+     
+            window.onload = function(){
+                document.getElementById('FirstFace').addEventListener('click', function () {sound1.play();})
+                document.getElementById('Lips').addEventListener('click', function (){sound2.play();})
+                document.getElementById('Robe').addEventListener('click', function () {sound3.play();})
+                document.getElementById('Lemon').addEventListener('click', function () {sound4.play();})
+            }  
+        </script>
+        <div class="row">
             <div class="image-container"><img id="FirstFace" src="img/FirstFace.png" onmouseover="this.src='img/SecondFace.png';" onmouseout="this.src='img/FirstFace.png';" height="200" width="200"/></div>
             <div class="image-container"><img id="FirstNail" src="img/FirstNail.png" onmouseover="this.src='img/SecondNail.png';" onmouseout="this.src='img/FirstNail.png';" height="200" width="200"/></div>
             <div class="image-container"><img id="FirstEyebrow" src="img/FirstEyebrow.png" onmouseover="this.src='img/SecondEyebrow.png';" onmouseout="this.src='img/FirstEyebrow.png';" height="200" width="200"/></div>
-    </div>
+        </div>
 
-     <div class="row">
-            <div class="image-container"><img id="Eyeshadow" src="img/Eyeshadow.png" height="200" width="200"/></div>
+        <div class="row">
+            <div class="image-container"><img id="SecondEyeshadow" src="img/SecondEyeshadow.png" onmouseover="this.src='img/Eyeshadow.png';" onmouseout="this.src='img/SecondEyeshadow.png';" height="200" width="200"/></div>
             <div class="image-container"><img id="Lips" src="img/Lips.png" height="200" width="200"/></div>
             <div class="image-container"><img id="Robe" src="img/Robe.png" height="200" width="200"/></div>
-    </div>
+            </div>
 
-    <div class="row">
-            <div class="image-container"><img id="Candles" src="img/Candles.png" height="200" width="200"/></div>
-            <div class="image-container"><img id="Eyelashes" src="img/Eyelashes.png" height="200" width="200"/></div>
+        <div class="row">
+            <div class="image-container"><img id="SecondCandle" src="img/SecondCandle.png" onmouseover="this.src='img/Candles.png';" onmouseout="this.src='img/SecondCandle.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="SecondEyelashes" src="img/SecondEyelashes.png" onmouseover="this.src='img/Eyelashes.png';" onmouseout="this.src='img/SecondEyelashes.png';" height="200" width="200"/></div>
             <div class="image-container"><img id="Lemon" src="img/Lemon.png" height="200" width="200"/></div>
-     </div>
-
- </body>
+        </div>
+        
+    </body>
+    
 </html>
